@@ -1,0 +1,166 @@
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    color: #fff;
+    background-color: #1D1D1D;
+}
+
+/* header-style */
+
+header{
+    width: 95%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+}
+
+#sound{
+    padding: 7px;
+    background-color: #1b1b1b;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    
+}
+
+.sound-icon{
+    font-size: 1.2rem;
+    margin: 7px;
+    color: #f50057;
+}
+
+.on-off{
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#off{
+    color: #f50057;
+}
+
+#on{
+    display: none;
+    color: #08fdd8;
+}
+
+.buttons-container .fas{
+    font-size: 2rem;
+    padding: 10px;
+    background-color: #181818;
+    color: #fff;
+    cursor: pointer;
+}
+
+.buttons-container .fas:nth-child(2){
+    display: none;
+}
+
+/* aside section  */
+
+.aside{
+    width: 100%;
+    height: 0%;
+    position: fixed;
+    top:0;
+    left: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.aside-wrapper{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.logo-section{
+    width: 100%;
+    min-height: 32vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000;
+    color: #fff;
+}
+
+.logo{
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+}
+
+.logo-img{
+    width: 50px;
+    height: auto;
+}
+
+.logo span{
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+.logo-section > span{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    font-family: 'Times New Roman', Times, Serif;
+}
+
+/* nav section inside sidebar*/
+
+.nav-links a{
+    display: block;
+    text-align: center;
+    line-height: 3rem;
+    text-decoration: none;
+    color: #908096;
+    transition: all 0.9s;
+}
+
+.nav-links a:hover{
+    color: #08fdd8;
+}
+
+.hr-nav-links{
+    margin-top: 0;
+    border-width: 1px;
+    border-style: solid none none;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    border-color: #2d2d2e;
+}
+
+.social-icons{
+    list-style: none;
+    display: flex;
+    margin-top: 30px;
+    margin-left: -3%;
+}
+
+.social-icons li{
+    width: 30px;
+    font-size: 1rem;
+}
+
+.social-icons-menu{
+    color: #908096;
+    transition: color 0.9s;
+}
+
+.social-icons-menu:hover{
+    color: #08fdd8;
+}
