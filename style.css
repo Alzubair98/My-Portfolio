@@ -40,6 +40,10 @@ header{
     color: #f50057;
 }
 
+.sound-icon.active{
+    color: #08fdd8;
+}
+
 .on-off{
     cursor: pointer;
     margin-left: 5px;
@@ -54,17 +58,65 @@ header{
     color: #08fdd8;
 }
 
-.buttons-container .fas{
+#on.active{
+    display: block;
+}
+
+#off.active{
+    display: none;
+}
+
+.hamburger-button {
     font-size: 2rem;
     padding: 10px;
-    background-color: #181818;
     color: #fff;
     cursor: pointer;
 }
-
-.buttons-container .fas:nth-child(2){
-    display: none;
+  
+  .hamburger-button > span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 9999px;
+    background-color: #fff;
 }
+
+  .hamburger-button,
+  .hamburger-button > span {
+    transition: all 0.4s ease-in-out;
+}
+  
+  .hamburger-button > span:not(:last-child) {
+    margin-bottom: 7px;
+}
+  
+  .hamburger-button.active {
+    transition-delay: 0.8s;
+    transform: rotate(45deg);
+}
+  
+  .hamburger-button.active > span:nth-child(2) {
+    width: 0;
+}
+  
+  .hamburger-button.active > span:nth-child(1),
+  .hamburger-button.active > span:nth-child(3) {
+    transition-delay: 0.4s;
+    height: 4px;
+}
+  
+  .hamburger-button.active > span:nth-child(1) {
+    transform: translateY(9px);
+    width: 30px;
+    height: 4px;
+
+}
+  
+  .hamburger-button.active > span:nth-child(3) {
+    transform: translateY(-12px) rotate(90deg);
+}
+
+
 
 /* aside section  */
 
@@ -75,7 +127,14 @@ header{
     top:0;
     left: 0;
     overflow: hidden;
+    background-color: #191919;
     z-index: 1;
+    transition: all 1s;
+}
+
+.aside.active{
+    height: 100%;
+    
 }
 
 .aside-wrapper{
@@ -163,4 +222,90 @@ header{
 
 .social-icons-menu:hover{
     color: #08fdd8;
+}
+
+
+/* text section */
+
+#section-home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 1.5rem;
+}
+
+.text-zone h1{
+    font-size: 2.2rem;
+    line-height: 40px;
+    letter-spacing: -1px;
+}
+
+.text-logo-img{
+    width: 2.5rem;
+    height: auto;
+    margin-bottom: -9px;
+}
+
+.text-zone .gray-text{
+    margin-top: 1.875%;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    position: relative;
+    color: #a2a2a3;
+}
+
+.contact-button{
+    background-color: #1D1D1D;
+    color: #08fdd8;
+    border-width: 1px;
+    border: solid none none;
+    border-color: #08fdd8;
+    width: 100%;
+    max-width: 200px;
+    height: 3rem;
+    display: block;
+    line-height: 40px;
+    letter-spacing: 3px;
+    position: relative;
+    -webkit-transition: all ease 0.9s;
+    -moz-transition: all ease 0.9;
+    transition: all ease 0.9s;
+}
+
+.contact-button:hover{
+    box-shadow: inset 200px 0 0 0 #08fdd8;
+    color: #181818;
+}
+
+.scroll-down{
+    position: absolute;
+    right: -1.27rem;
+    bottom: 3.3rem;
+    transform: rotate(90deg);
+    display: block;
+    font-size: 00.8rem;
+}
+
+.scroll-down-left{
+    left: -1.87rem;
+    right: auto;
+}
+
+.scroll-down span{
+    display: inline-block;
+    animation: scroll .5s linear infinite alternate-reverse;
+}
+
+.scroll-down i{
+    transform: rotate(-90deg);
+    margin-left: 10px;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(-7px);
+    }
+    100%{
+        transform: translateX(7px);
+    }
 }
