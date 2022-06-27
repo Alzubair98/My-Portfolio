@@ -309,3 +309,36 @@ header{
         transform: translateX(7px);
     }
 }
+
+
+
+
+
+@media (min-width: 768px){
+    header{
+        justify-content: flex-end;
+    }
+
+    .hamburger-button{
+        display: none;
+    }
+
+    .aside{
+        width: 10%;
+        height: 100%;
+    }
+
+    .social-icons{
+        margin-left: -20%;
+    }
+
+    .logo-section{
+        min-height: 20vh;
+    }
+
+    .logo-img{
+        height: auto;
+        width: 60px;
+    }
+
+}
