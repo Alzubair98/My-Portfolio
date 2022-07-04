@@ -341,4 +341,21 @@ header{
         width: 60px;
     }
 
+
+    /* home section */
+    #section-home{
+        padding-left: 13rem;
+    }
+
+    .text-zone h1{
+        font-size: 6.3rem;
+        line-height: 85px;
+        letter-spacing: -6px;
+    }
+
+    .text-logo-img{
+        width: 50px;
+    }
+
+
 }
