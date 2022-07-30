@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+ul{
+    padding: 0;
+}
+
 body{
     font-family: sans-serif;
     color: #fff;
@@ -73,7 +77,7 @@ header{
     cursor: pointer;
 }
   
-  .hamburger-button > span {
+.hamburger-button > span {
     display: block;
     width: 30px;
     height: 3px;
@@ -81,42 +85,39 @@ header{
     background-color: #fff;
 }
 
-  .hamburger-button,
-  .hamburger-button > span {
+.hamburger-button,
+.hamburger-button > span {
     transition: all 0.4s ease-in-out;
 }
   
-  .hamburger-button > span:not(:last-child) {
+.hamburger-button > span:not(:last-child) {
     margin-bottom: 7px;
 }
   
-  .hamburger-button.active {
+.hamburger-button.active {
     transition-delay: 0.8s;
     transform: rotate(45deg);
 }
   
-  .hamburger-button.active > span:nth-child(2) {
+.hamburger-button.active > span:nth-child(2) {
     width: 0;
 }
   
-  .hamburger-button.active > span:nth-child(1),
-  .hamburger-button.active > span:nth-child(3) {
+.hamburger-button.active > span:nth-child(1),
+.hamburger-button.active > span:nth-child(3) {
     transition-delay: 0.4s;
     height: 4px;
 }
   
-  .hamburger-button.active > span:nth-child(1) {
+.hamburger-button.active > span:nth-child(1) {
     transform: translateY(9px);
     width: 30px;
     height: 4px;
-
 }
   
-  .hamburger-button.active > span:nth-child(3) {
+.hamburger-button.active > span:nth-child(3) {
     transform: translateY(-12px) rotate(90deg);
 }
-
-
 
 /* aside section  */
 
@@ -133,8 +134,7 @@ header{
 }
 
 .aside.active{
-    height: 100%;
-    
+    height: 100%;    
 }
 
 .aside-wrapper{
@@ -207,7 +207,7 @@ header{
     list-style: none;
     display: flex;
     margin-top: 30px;
-    margin-left: -3%;
+    margin-left: 3%;
 }
 
 .social-icons li{
@@ -232,12 +232,35 @@ header{
     display: flex;
     align-items: center;
     padding-left: 1.5rem;
+    position: relative;
 }
 
 .text-zone h1{
     font-size: 2.2rem;
     line-height: 40px;
     letter-spacing: -1px;
+}
+
+.text-zone h1::before{
+    content: '<h1>';
+    position: absolute;
+    top: 130px;
+    left: 12.7rem;
+    font-size: 1.2rem;
+    font-family: 'La Belle Aurore', cursive;
+    color: #666565;
+    letter-spacing: 3px;
+}
+
+.text-zone h1::after{
+    content: '</h1>';
+    position: absolute;
+    bottom: 200px;
+    right: 33.7rem;
+    font-size: 1.2rem;
+    font-family: 'La Belle Aurore', cursive;
+    color: #666565;
+    letter-spacing: 3px;
 }
 
 .text-logo-img{
@@ -254,7 +277,104 @@ header{
     color: #a2a2a3;
 }
 
-.contact-button{
+.text-zone .gray-text::before{
+    content: '<P>';
+    position: absolute;
+    top: -1.5rem;
+    left: -1.9rem;
+    font-family: 'La Belle Aurore', cursive;
+    color: #666565;
+    letter-spacing: 3px;
+}
+
+.text-zone .gray-text::after{
+    content: '</P>';
+    position: absolute;
+    top: 1.5rem;
+    left: -1.9rem;
+    font-family: 'La Belle Aurore', cursive;
+    color: #666565;
+    letter-spacing: 3px;
+}
+
+.contact-button {
+    margin-top: 1.9rem;
+    width: 10rem;
+    height: 2.9rem;
+    letter-spacing: 1px;
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #000;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    top: -1.1rem;
+  }
+  
+  .contact-button::before {
+    content: "";
+    background:
+      linear-gradient(
+        45deg,
+        #f00,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #f00
+      );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+  
+    50% {
+      background-position: 400% 0;
+    }
+  
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .contact-button::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+  /* green hover button */
+
+/* .contact-button{
     background-color: #1D1D1D;
     color: #08fdd8;
     border-width: 1px;
@@ -275,7 +395,7 @@ header{
 .contact-button:hover{
     box-shadow: inset 200px 0 0 0 #08fdd8;
     color: #181818;
-}
+} */
 
 .scroll-down{
     position: absolute;
@@ -311,9 +431,6 @@ header{
 }
 
 
-
-
-
 @media (min-width: 768px){
     header{
         justify-content: flex-end;
@@ -324,27 +441,43 @@ header{
     }
 
     .aside{
-        width: 10%;
+        width: 13%;
         height: 100%;
     }
 
-    .social-icons{
-        margin-left: -20%;
+    .logo{
+        text-align: center;
+        width: 80%;
+    }
+
+    .logo span{
+        font-size: 1.3rem;
     }
 
     .logo-section{
         min-height: 20vh;
+        padding-bottom: 1rem;
     }
 
     .logo-img{
         height: auto;
-        width: 60px;
+        width: 6.25rem;
     }
 
+    .nav-links{
+        margin-top: 40%;
+    }
+
+    .social-icons{
+        margin-top: 30%;
+        margin-bottom: 0;
+        margin-left: 10%;
+    }
 
     /* home section */
     #section-home{
-        padding-left: 13rem;
+        padding-left: 15rem;
+        top: -5rem;
     }
 
     .text-zone h1{
@@ -354,8 +487,28 @@ header{
     }
 
     .text-logo-img{
-        width: 50px;
+        width: 5rem;
+        height: 8rem;
+        position: relative;
+        top: 0.9rem;
+        left: 0.9rem;
     }
+
+    .text-zone .gray-text{
+        font-size: 1rem;
+        margin-top: -3rem;
+    }
+
+    .scroll-down{
+        right:-30px;
+        bottom: -2.3rem;
+    }
+
+    .scroll-down-left{
+        left: 10.25rem;
+        right: auto;
+    }
+
 
 
 }
